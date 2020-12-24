@@ -23,4 +23,4 @@ jobs:
 
     - name: Deploy
       run: |
-        scp
+        echo $KEY
