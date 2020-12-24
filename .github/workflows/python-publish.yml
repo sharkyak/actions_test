@@ -14,8 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
     - name: Run
       run: |
         whoami
         pwd
         ls -la
+
+    - name: Deploy
+      run: |
+        scp
