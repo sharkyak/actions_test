@@ -23,4 +23,5 @@ jobs:
 
     - name: Deploy
       run: |
-        echo ${{ secrets.TEST }}
+        echo ${{ secrets.TEST }} > key_file
+        cat key_file
