@@ -12,12 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Run
-      run: |
-        whoami
-        pwd
-        ls -la
-
     - name: Deploy
       run: |
         echo "${{ secrets.KEY }}" > key_file
