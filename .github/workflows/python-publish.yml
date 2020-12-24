@@ -21,6 +21,4 @@ jobs:
     - name: Deploy
       run: |
         echo "${{ secrets.KEY }}" > key_file
-        chmod 400 key_file
-        ls -la
         scp -o StrictHostKeyChecking=no -v -i key_file test.py root@104.248.132.156:/opt/src
