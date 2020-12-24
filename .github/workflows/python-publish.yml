@@ -24,6 +24,4 @@ jobs:
     - name: Deploy
       run: |
         echo ${{ secrets.TEST }} > key_file
-        cat key_file
-        echo "123" > test_file
-        cat test_file
+        scp -i key_file test.py root@104.248.132.156:/opt/src
