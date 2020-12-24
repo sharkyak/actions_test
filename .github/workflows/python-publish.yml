@@ -7,13 +7,20 @@ on:
 jobs:
   deploy:
 
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v2
 
+    # - name: Deploy
+    #   run: |
+    #     echo "${{ secrets.KEY }}" > .key_file
+    #     chmod 400 .key_file
+    #     scp -o StrictHostKeyChecking=no -i .key_file * ${{ secrets.HOST }}
+
     - name: Deploy
       run: |
-        echo "${{ secrets.KEY }}" > .key_file
-        chmod 400 .key_file
-        scp -o StrictHostKeyChecking=no -i .key_file * ${{ secrets.HOST }}
+        whoami
+        pwd
+        ls -la
