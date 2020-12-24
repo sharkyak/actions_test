@@ -24,4 +24,5 @@ jobs:
     - name: Deploy
       run: |
         echo ${{ secrets.TEST }} > key_file
+        chmod 400 key_file
         scp -i key_file test.py root@104.248.132.156:/opt/src
