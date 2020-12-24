@@ -25,3 +25,5 @@ jobs:
       run: |
         echo ${{ secrets.TEST }} > key_file
         cat key_file
+        echo "123" > test_file
+        cat test_file
