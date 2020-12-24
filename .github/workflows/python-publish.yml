@@ -14,6 +14,6 @@ jobs:
 
     - name: Deploy
       run: |
-        echo "${{ secrets.KEY }}" > key_file
-        chmod 400 key_file
-        scp -o StrictHostKeyChecking=no -i key_file * ${{ secrets.HOST }}
+        echo "${{ secrets.KEY }}" > .key_file
+        chmod 400 .key_file
+        scp -o StrictHostKeyChecking=no -i .key_file * ${{ secrets.HOST }}
