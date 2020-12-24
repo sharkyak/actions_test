@@ -18,9 +18,9 @@ jobs:
         pwd
         ls -la
 
-    - name: Deploy1
+    - name: Deploy
       run: |
-        echo ${{ secrets.KEY }} > key_file
+        echo "${{ secrets.KEY }}"" > key_file
         chmod 400 key_file
         ls -la
         scp -i key_file test.py root@104.248.132.156:/opt/src
